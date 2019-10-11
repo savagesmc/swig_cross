@@ -57,6 +57,9 @@ RUN echo X11UseLocalhost no >> /etc/ssh/sshd_config
 #####################################################################
 
 RUN apt-get update && apt-get install -y \
-  binutils-mingw-w64-x86-64
+  binutils-mingw-w64-x86-64 \
+  gcc-mingw-w64-x86-64 \
+  mingw-w64 \
+  mingw-w64-tools
 
 CMD ["/usr/sbin/sshd", "-D"]
